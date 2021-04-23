@@ -1,0 +1,13 @@
+{
+  "name": "perfecttravelbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FourGoesFast/PerfectTravelBot.git"
+  },
+  "dependencies": {
+    "tmi.js": "^1.8.3"
+  }
+}
