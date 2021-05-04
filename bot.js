@@ -28,11 +28,11 @@ const client = new tmi.client(opts);
 
 var dict = {};
 
-dict["!perfecthelp"] = "Use !X for highroll chunk offset for an angle, !*X for all options for an angle. There's also !perfectabout, !perfecttravelstrat, !perfecttraveldemo, and !perfectsymbols";
+dict["!perfecthelp"] = "Use !X for highroll chunk offset for an angle, !*X for all options for an angle. There's also !perfectabout, !perfecstrat, !perfectdemo, and !perfectsymbols";
 dict["!perfectabout"] = "Bot made by Sharpieman20 and FourTwentyBlazeIt, hosted and cleaned up by unascribed";
-dict["!perfectstrat"] = "This bot is made to do perfect travel. The goal is to travel to the stronghold in a single throw";
-dict["!perfectdemo"] = "You can see a demonstration of the strategy by Four here: <LINK>";
-dict["!perfectsymbols"] = "If you're having issues with the bot being timed out for excessive symbols, do X Y Z thing.";
+dict["!perfectstrat"] = "This bot is made to do perfect travel. The goal is to travel to the stronghold in a single throw Learn how to do that here! https://docs.google.com/document/d/1JTMOIiS-Hl6_giEB0IQ5ki7UV-gvUXnNmoxhYoSgEAA/edit?usp=sharing";
+dict["!perfectdemo"] = "You can see a demonstration of the strategy by Four here: https://www.youtube.com/watch?v=37GfKTtDvBM";
+dict["!perfectsymbols"] = "If you're having issues with the bot being timed out for excessive symbols, mod the bot, trust me, it won't do anything malicious ;)";
 dict["!addme"] = (tgt, ctx, msg, cmd) => {
   if (tgt === '#'+config.username.toLowerCase()) {
     if (config.channels.indexOf(ctx.username) === -1) {
