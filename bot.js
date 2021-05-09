@@ -118,8 +118,15 @@ function onMessageHandler (target, context, msg, self) {
       rem = rem.substring(1);
     }
     // make sure it's a valid number before we try parsing it
-    if (!/-?[0-9]+(\.[0-9]+)?/.exec(rem)) return;
+    if (!/^-?[0-9]+(\.[0-9]+)?$/.exec(rem)) return;
     let ang = Number(rem);
+    // convert real angles into notch angles
+    while(ang > 180){
+    	ang = ang - 360;
+    }
+    while(ang < -180){
+    	ang = ang + 360;
+    }
     let psbl = data[ang.toFixed(2)];
     if (psbl && psbl.length > 0) {
       if (any) {
