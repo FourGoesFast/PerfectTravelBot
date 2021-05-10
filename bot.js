@@ -126,25 +126,26 @@ function onMessageHandler (target, context, msg, self) {
     if(ang>18000||ang<-18000){
     	txt = "Angle out of range, use the f3 method or unspin and re-measure COGGERS";
     }
-    else if (psbl && psbl.length > 0) {
-    	ang = ang % 360
+    else{
+        ang = ang % 360
 		if(ang>180){
   			ang=ang-360;
 		}
 		if(ang<-180){
   			ang=ang+360;
-		}
-	let psbl = data[ang.toFixed(2)];
-      if (any) {
-        txt = psbl.join(' | ');
-      } else {
-        txt = psbl[0];
-      }
-    } else {
-      txt = "None";
-    }
-  } else {
-    return;
+		} 
+		let psbl = data[ang.toFixed(2)];
+		if (psbl && psbl.length > 0) {
+
+      	if (any) {
+        	txt = psbl.join(' | ');
+      	} else {
+        	txt = psbl[0];
+      	}
+  	 	} else {
+      	txt = "None";
+    	}
+  	} 
   }
   
   console.log(txt);
