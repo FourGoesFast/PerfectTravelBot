@@ -121,18 +121,19 @@ function onMessageHandler (target, context, msg, self) {
     if (!/^-?[0-9]+(\.[0-9]+)?$/.exec(rem)) return;
     let ang = Number(rem);
     // convert real angles into notch angles
-   ang = ang % 360
-	if(ang>180){
-  		ang=ang-360;
-	}
-	if(ang<-180){
-  		ang=ang+360;
-	}
+
     let psbl = data[ang.toFixed(2)];
     if(ang>18000||ang<-18000){
     	txt = "Angle out of range, use the f3 method or unspin and re-measure COGGERS";
     }
     else if (psbl && psbl.length > 0) {
+    	ang = ang % 360
+		if(ang>180){
+  			ang=ang-360;
+		}
+		if(ang<-180){
+  			ang=ang+360;
+		}
       if (any) {
         txt = psbl.join(' | ');
       } else {
