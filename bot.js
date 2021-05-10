@@ -122,7 +122,7 @@ function onMessageHandler (target, context, msg, self) {
     let ang = Number(rem);
     // convert real angles into notch angles
 
-    let psbl = data[ang.toFixed(2)];
+
     if(ang>18000||ang<-18000){
     	txt = "Angle out of range, use the f3 method or unspin and re-measure COGGERS";
     }
@@ -134,6 +134,7 @@ function onMessageHandler (target, context, msg, self) {
 		if(ang<-180){
   			ang=ang+360;
 		}
+	let psbl = data[ang.toFixed(2)];
       if (any) {
         txt = psbl.join(' | ');
       } else {
