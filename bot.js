@@ -144,6 +144,8 @@ function onMessageHandler (target, context, msg, self) {
       	}
   	 	} else {
       	txt = "None";
+    	} else{
+    	return;
     	}
   	} 
   }
