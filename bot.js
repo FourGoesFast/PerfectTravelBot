@@ -266,23 +266,24 @@ function onMessageHandler(target, context, msg, self) {
 			if (ang < -180) {
 				ang = ang + 360;
 			}
-			if (dataSet=128){
-				let psbl = data128[ang.toFixed(2)];
+			let psbl;
+			if (dataSet==128){
+				psbl = data128[ang.toFixed(2)];
 			}
-			else if (dataSet=256){
-				let psbl = data256[ang.toFixed(2)];
+			else if (dataSet==256){
+				psbl = data256[ang.toFixed(2)];
 			}
-			else if (dataSet=512){
-				let psbl = data512[ang.toFixed(2)];
+			else if (dataSet==512){
+				psbl = data512[ang.toFixed(2)];
 			}
-			else if (dataSet=1024){
-				let psbl = data1024[ang.toFixed(2)];
+			else if (dataSet==1024){
+				psbl = data1024[ang.toFixed(2)];
 			}
-			else if (dataSet=2048){
-				let psbl = data2048[ang.toFixed(2)];
+			else if (dataSet==2048){
+				psbl = data2048[ang.toFixed(2)];
 			}
 			else{
-				let psbl = data[ang.toFixed(2)];
+				psbl = data[ang.toFixed(2)];
 			}
 
 			if (psbl && psbl.length > 0) {
