@@ -292,7 +292,7 @@ function onMessageHandler(target, context, msg, self) {
 					if (psbl.length < 30)
 						txt = psbl.join(' | ');
 					else
-						txt = "Too Many Offsets"
+						txt = "Too Many Offsets";
 				} else {
 					txt = psbl[0];
 				}
