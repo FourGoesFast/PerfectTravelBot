@@ -21,7 +21,7 @@ function saveConfig() {
 	});
 }
 
-const data = require('./data.json');
+const data = require('./dataWithDistance.json');
 const data128 = require('./data128.json');
 const data256 = require('./data256.json');
 const data512 = require('./data512.json');
@@ -289,7 +289,7 @@ function onMessageHandler(target, context, msg, self) {
 			if (psbl && psbl.length > 0) {
 
 				if (any) {
-					if (psbl.length < 30)
+					if (psbl.length < 26)
 						txt = psbl.join(' | ');
 					else
 						txt = "Too Many Offsets";
